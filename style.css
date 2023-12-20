@@ -1,0 +1,848 @@
+/* Reset styles for all elements */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Define custom color variables */
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #252525;
+  --accent-color: #ffa500;
+  --secondary-text-color: #495057;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+i {
+  color:var(--accent-color);
+}
+
+/* Font styles for different heading levels */
+h1,
+h2,input {
+  font-family: 'El Messiri', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Mirza', serif;
+}
+
+/* Font styles for paragraphs, list items, spans, and links */
+p,
+li, label,
+span,
+a,
+button {
+  font-family: 'Merriweather', serif;
+  list-style: none;
+}
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+/* General body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--main-text-color);
+  background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 0% 0% / 64px 64px, radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 32px 32px / 64px 64px, linear-gradient(rgba(243, 247, 5, 0.5) 2px, transparent 2px) 0px -1px / 32px 32px, linear-gradient(90deg, rgba(243, 247, 5, 0.5) 2px, #ffffff 2px) -1px 0px / 32px 32px #ffffff;
+  background-size: 64px 64px, 64px 64px, 32px 32px, 32px 32px;
+  backdrop-filter: blur(5px);
+}
+
+
+/* Navigation Bar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+background:var(--accent-color);
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  color:rgb(255, 213, 0);
+
+}
+
+/* Styles for the navbar brand and toggle button */
+.navbar-brand h1 {
+  font-size: 1.5em;
+  color: #313131;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--main-text-color);
+  margin: 3px 0;
+}
+
+/* Styles for the navbar menu items */
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  color: #313131;
+}
+
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #000; */
+  color: #fff;
+  height: 100vh;
+  gap: 5rem;
+   background-image: url(
+    "https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover; 
+  background-position: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.877);
+}
+
+
+
+.travel-form {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.travel-form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.travel-form-content label {
+  font-size: 1.2rem;
+  color: var(--main-bg-color);
+}
+
+.travel-form-content input {
+  padding: 1rem;
+  border: 1px solid var(--accent-color);
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #E8F0FE;
+}
+
+.bookcab {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--main-text-color);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.bookcab:hover {
+  background-color: var(--main-text-color);
+  color: var(--accent-color);
+}
+
+
+
+.hero-image {
+  position: absolute;
+  bottom: -7rem;
+  z-index: -1;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0.1;
+}
+
+
+
+
+
+
+/* Responsive adjustments for the Hero Section */
+@media (max-width: 768px) {
+  .hero-section {
+    gap: 3rem;
+  }
+
+  .travel-form {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .travel-form-content label {
+    font-size: 1rem;
+  }
+
+  .travel-form-content input {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+
+  }
+
+  .bookcab {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    bottom: -5rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* About Section Styles */
+.about-us {
+  text-align: left;
+  padding: 80px;
+  background: linear-gradient(97deg, #9bff7651, #ffffff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 26s ease infinite;
+    -moz-animation: AnimationName 26s ease infinite;
+    animation: AnimationName 26s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.about-content-left {
+  flex: 1;
+}
+.brand-name{
+  color: #fe9605;
+}
+.about-content-left h2 {
+  font-size: 2.5em;
+  color: var(--main-text-color);
+  margin-bottom: 20px;
+  
+}
+
+.about-content-left p {
+  max-width: 600px;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.social-icons{
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
+
+.social-icons a {
+  filter: drop-shadow(1px 1px);
+}
+
+.social-icons a:hover {
+  filter: none;
+}
+
+
+.about-content-left button:hover{
+  background-color: black;
+  color: yellow;
+}
+
+.about-content-right {
+  flex: 1;
+}
+
+.about-card-section {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* Individual Card Styles */
+.card-1,
+.card-2,
+.card-3 {
+  flex: 1;
+  background-color: #fffbfbd9;
+  border: 1px solid orange;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 5px 4px 8px rgba(18, 5, 5, 0.1);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.card-1-content,
+.card-2-content,
+.card-3-content {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-1 p,
+.card-2 p,
+.card-3 p {
+  margin-top: 10px;
+  color: #495057;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-content-left,
+  .about-content-right {
+    width: 100%;
+  }
+
+  .about-content-left h1 {
+    font-size: 2em;
+  }
+
+  .about-content-left button {
+    font-size: 1em;
+  }
+
+  .about-card-section {
+    flex-direction: column;
+  }
+
+  .card-1,
+  .card-2,
+  .card-3 {
+    margin: 10px;
+  }
+}
+
+
+
+
+/* About Section End */
+
+
+
+/* Service Section Styles */
+.service-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.section-title h2 {
+  font-size: 2.5em;
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* Main Service Card Styles */
+.main-service-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+/* Individual Service Card Styles */
+.service-card {
+  width: 250px;
+  margin: 20px;
+  background-color: rgba(1, 0, 0, 0.2); /* Corrected background color */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.service-card img {
+  width: 100%;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -20rem;
+  z-index: -1;
+  object-fit: contain; 
+  aspect-ratio: 1/4;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5)); /* Adjust the shadow values as needed */
+}
+
+
+.service-card h3 {
+  margin-top: 15px;
+  color: #333;
+}
+
+.enquire-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.enquire-btn i {
+  margin-right: 5px;
+  color: #006B60;
+}
+
+.enquire-btn:hover{
+  background-color: black;
+  color: yellow;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 500px) {
+  .main-service-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cards for smaller screens */
+     margin-top: -5rem;
+  }
+
+.section-content p{
+  font-size: 0.9rem;
+}
+
+
+
+.service-card{
+  margin-top: 9rem;
+}
+}
+
+
+
+
+
+
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 650px) {
+  /* Navbar adjustments */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--main-bg-color);
+  }
+  .bar{
+    color: #fff;
+  }
+
+  .navbar-menu a {
+    margin: 10px 0;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+
+
+
+
+/* Style for the Popular Cab Routes section */
+.popular-cab {
+padding: 2rem;
+font-size: 1.2rem; 
+text-align: left;
+margin-top: 6rem;
+margin-left: 6rem;
+}
+
+/* Style for the Cab Routes section */
+
+.cab-routes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+/* Style for each Cab Route card */
+.cab-routes-card{
+  width: 400px;
+  height: 140px;
+ display: flex;
+ margin-top: 1rem;
+ border: 1px solid var(--accent-color);
+ gap: 1rem;
+ border-radius: 10px;
+ padding: 1rem;
+}
+
+.cab-routes-card-image{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the Cab Route images */
+.cab-routes-card img {
+  width: auto;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Style for the Cab Route text */
+.cab-route-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+/* Style for Cab Route title */
+.cab-route-text h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+
+@media (max-width: 500px) {
+
+/* Style for the Popular Cab Routes section */
+.popular-cab {
+  padding: 2rem;
+  font-size: 1.2rem; 
+  text-align: left;
+  margin-top: 4rem;
+  margin-left: 1rem;
+  }
+  
+  /* Style for the Cab Routes section */
+  
+  .cab-routes{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+  }
+
+.cab-routes-section{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+}
+
+
+
+
+/* Center the content horizontally */
+
+
+
+/* Center the entire section */
+
+.book-with-us {
+  margin-top: 4rem;
+  padding: 1.5rem; /* Add padding around the section */
+}
+
+.book-with-us-heading {
+  
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Center the card container */
+.book-with-us-card {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between cards if needed */
+}
+
+/* Style each book card */
+.book-card {
+  text-align: center;
+  padding: 1.2rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  width: 300px; /* Set a fixed width for all cards */
+  height: 180px;
+}
+
+/* Center the card icons */
+.book-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-card-icon img{
+  width: 40%;
+}
+
+/* Center the card headings */
+.book-card-heading {
+  margin-top: 10px; /* Add margin at the top of the heading */
+}
+
+/* Center the card paragraphs */
+.book-card-paragraph {
+  margin-top: 10px; /* Add margin at the top of the paragraph */
+}
+
+
+
+
+
+/* Media query for responsiveness */
+
+@media (max-width: 500px) {
+ 
+/* Center the card container */
+.book-with-us-card {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between cards if needed */
+}
+}
+
+
+
+.footer-section{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(244, 244, 242);
+  gap: 5rem;
+}
+
+
+.footer-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+   width: 100%;
+}
+
+.quick-info{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.quick-info h3{
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.quick-info ul{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-icons-footer{
+  font-size: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.copyright{
+  border-top: 1px solid gray;
+  text-align: center;
+}
+
+.copyright p{
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.2rem;
+  }
+
+  .quick-info {
+    width: 100%;
+  }
+}
+
+
+
+
+@media (min-width: 650px) and (max-width: 1030px) {
+
+.main-service-card{
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.service-card{
+  padding: 1rem;
+}
+
+.popular-cab{
+  padding: 2rem;
+  font-size: 1.2rem; 
+  text-align: left;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+
+.cab-routes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-with-us-card{
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+}
+
+@media (min-width: 500px) and (max-width: 650px) {
+
+.main-service-card{
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.service-card{
+  padding: 1rem;
+}
+
+.popular-cab{
+  padding: 2rem;
+  font-size: 1.2rem; 
+  text-align: left;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+
+.cab-routes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-with-us-card{
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+}
