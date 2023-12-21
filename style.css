@@ -363,8 +363,7 @@ max-width: 600px;
 @media (max-width: 768px) {
 
   .about-us{
-    background-color: #252525;
-    padding: 0;
+    padding: 0.8rem;
   }
  
   .about-section {
@@ -383,7 +382,6 @@ max-width: 600px;
     width: 100%;
     text-align: center;
     padding: 0rem;
-    background-color: #006B60;
   }
 
   .about-content-left h1 {
