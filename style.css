@@ -177,7 +177,6 @@ background:var(--accent-color);
   font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  overflow: hidden;
   position: relative;
 }
 
@@ -194,7 +193,6 @@ background:var(--accent-color);
   z-index: -1;
   width: 100%;
   object-fit: cover;
-  overflow: hidden;
   opacity: 0.1;
 }
 
