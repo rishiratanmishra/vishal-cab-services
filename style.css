@@ -52,12 +52,8 @@ a {
 
 /* General body styles */
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   color: var(--main-text-color);
-  background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 0% 0% / 64px 64px, radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 32px 32px / 64px 64px, linear-gradient(rgba(243, 247, 5, 0.5) 2px, transparent 2px) 0px -1px / 32px 32px, linear-gradient(90deg, rgba(243, 247, 5, 0.5) 2px, #ffffff 2px) -1px 0px / 32px 32px #ffffff;
-  background-size: 64px 64px, 64px 64px, 32px 32px, 32px 32px;
-  backdrop-filter: blur(5px);
 }
 
 
@@ -189,13 +185,15 @@ background:var(--accent-color);
 
 .hero-image {
   position: absolute;
-  bottom: -7rem;
+  bottom: -6rem;
   z-index: -1;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
+.hero-image img{
+  max-width: 100%;
+  object-fit: cover;
+}
 
 
 
@@ -552,6 +550,7 @@ max-width: 600px;
 
   .navbar-menu a {
     margin: 10px 0;
+    text-align: center;
   }
 
   .navbar-toggle {
@@ -589,7 +588,7 @@ max-width: 600px;
 
 .cab-routes-card{
   display: flex;
-  width: 400px;
+  width: 350px;
   padding: 1rem;
   justify-content: left;
   align-items: center;
@@ -602,7 +601,7 @@ max-width: 600px;
 }
 
 .cab-routes-card img{
-  width: 100%;
+  max-width: 100%;
   object-fit: contain;
   aspect-ratio: 3/2;
 }
