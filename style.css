@@ -641,7 +641,9 @@ max-width: 600px;
   
   }
   
- 
+ .cab-routes-card{
+   width:200px
+ }
   
   
 }
