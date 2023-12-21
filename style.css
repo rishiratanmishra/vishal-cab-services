@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 i {
@@ -624,7 +625,7 @@ margin-left: 6rem;
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 500px){
 
 /* Style for the Popular Cab Routes section */
 .popular-cab {
@@ -642,7 +643,17 @@ margin-left: 6rem;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  }
 
+  .cab-routes-card{
+    width: 100%;
+    height: auto;
+   display: flex;
+   margin-top: 1rem;
+   border: 1px solid var(--accent-color);
+   gap: 1rem;
+   border-radius: 10px;
+   padding: 1rem;
   }
 
 .cab-routes-section{
