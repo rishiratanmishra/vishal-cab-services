@@ -292,7 +292,7 @@ background:var(--accent-color);
 }
 
 .about-content-left p {
-  max-width: 600px;
+max-width: 600px;
   color: #495057;
   line-height: 1.6;
 }
@@ -361,13 +361,29 @@ background:var(--accent-color);
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+
+  .about-us{
+    background-color: #252525;
+    padding: 0;
+  }
+ 
   .about-section {
     flex-direction: column;
+    width: 100%;
   }
+
+  .about-content-left p {
+    max-width: none;
+      color: #495057;
+      line-height: 1.6;
+    }
 
   .about-content-left,
   .about-content-right {
     width: 100%;
+    text-align: center;
+    padding: 0rem;
+    background-color: #006B60;
   }
 
   .about-content-left h1 {
@@ -377,6 +393,20 @@ background:var(--accent-color);
   .about-content-left button {
     font-size: 1em;
   }
+  .social-icons{
+    justify-content: center;
+    
+  }
+  
+  .social-icons a {
+    filter: drop-shadow(1px 1px);
+  }
+  
+  .social-icons a:hover {
+    filter: none;
+  }
+  
+
 
   .about-card-section {
     flex-direction: column;
