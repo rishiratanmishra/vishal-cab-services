@@ -16,7 +16,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 i {
@@ -563,106 +562,104 @@ max-width: 600px;
 }
 
 
-
-
-
-/* Style for the Popular Cab Routes section */
-.popular-cab {
-padding: 2rem;
-font-size: 1.2rem; 
-text-align: left;
-margin-top: 6rem;
-margin-left: 6rem;
-}
-
-/* Style for the Cab Routes section */
-
-.cab-routes{
+/* Popular cab routes */
+.popular-cab{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: left;
 }
-/* Style for each Cab Route card */
-.cab-routes-card{
-  width: 400px;
-  height: 140px;
- display: flex;
- margin-top: 1rem;
- border: 1px solid var(--accent-color);
- gap: 1rem;
- border-radius: 10px;
- padding: 1rem;
+.popular-cab h2{
+  margin-left: 6rem;
 }
-
-.cab-routes-card-image{
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Style for the Cab Route images */
-.cab-routes-card img {
-  width: auto;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-/* Style for the Cab Route text */
-.cab-route-text {
+.cab-routes-section{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #333;
+  align-items: center;
+  gap: 2rem;
+
+}
+.cab-routes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
 }
 
-/* Style for Cab Route title */
-.cab-route-text h3 {
-  margin: 0;
-  font-size: 1.2em;
+.cab-routes-card{
+  display: flex;
+  width: 400px;
+  padding: 1rem;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
 }
 
+.cab-routes-card-image{
+  width: 30%;
+}
 
-@media (max-width: 500px){
+.cab-routes-card img{
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 3/2;
+}
 
-/* Style for the Popular Cab Routes section */
-.popular-cab {
-  padding: 2rem;
-  font-size: 1.2rem; 
-  text-align: left;
-  margin-top: 4rem;
+.cab-route-text{
   margin-left: 1rem;
+}
+/* Popular cab routes */
+
+@media (max-width: 650px){
+
+  .popular-cab{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: left;
+    background-color: red;
   }
-  
-  /* Style for the Cab Routes section */
-  
-  .cab-routes{
-    display: block;
+  .popular-cab h2{
+    margin-left: 0rem;
+    text-align: center;
+  }
+  .cab-routes-section{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+  
   }
-
-  .cab-routes-card{
-    width: 100%;
-    height: auto;
-   display: flex;
-   margin-top: 1rem;
-   border: 1px solid var(--accent-color);
-   gap: 1rem;
-   border-radius: 10px;
-   padding: 1rem;
+  .cab-routes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  
   }
-
-.cab-routes-section{
-display: flex;
-flex-direction: column;
-align-items: center;
+  
+ 
+  
+  
 }
 
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -824,21 +821,6 @@ align-items: center;
   padding: 1rem;
 }
 
-.popular-cab{
-  padding: 2rem;
-  font-size: 1.2rem; 
-  text-align: left;
-  margin-top: 4rem;
-  margin-left: 1rem;
-}
-
-
-.cab-routes{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .book-with-us-card{
   display: flex;
@@ -861,21 +843,8 @@ align-items: center;
   padding: 1rem;
 }
 
-.popular-cab{
-  padding: 2rem;
-  font-size: 1.2rem; 
-  text-align: left;
-  margin-top: 4rem;
-  margin-left: 1rem;
-}
 
 
-.cab-routes{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .book-with-us-card{
   display: flex;
