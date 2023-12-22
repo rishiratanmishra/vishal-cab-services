@@ -573,6 +573,7 @@ max-width: 600px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding:2rem;
 }
 
 .cab-routes {
