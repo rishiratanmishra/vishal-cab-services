@@ -255,7 +255,7 @@ background:var(--accent-color);
   }
 
   .hero-image {
-    bottom: 0rem;
+    bottom: -1.5rem;
   }
 }
 
