@@ -130,8 +130,21 @@ background:var(--accent-color);
 
   .navbar-toggle {
     display: flex;
+    color: var(--main-text-color);
   }
 }
+
+.navbar-toggle {
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggle:active {
+  color: var(--main-text-color);
+  transform: rotate(90deg);
+}
+
+
+
 
 
 .hero-section {
@@ -260,6 +273,16 @@ background:var(--accent-color);
 }
 
 
+.hero-section {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
 
 
@@ -502,6 +525,17 @@ max-width: 600px;
 }
 
 
+.service-card {
+  transition: transform 0.5s ease;
+}
+
+.service-card:hover {
+  transform: rotateY(180deg);
+}
+
+
+
+
 .service-card h3 {
   margin-top: 15px;
   color: #333;
@@ -554,6 +588,10 @@ max-width: 600px;
 
 
 
+.service-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
 
 
 
@@ -763,11 +801,32 @@ max-width: 600px;
   gap: 0.5rem;
 }
 
+
+
+
+
+
+
+
+
+
 .social-icons-footer{
   font-size: 2rem;
   display: flex;
   gap: 2rem;
 }
+
+
+.social-icons-footer a {
+  transition: transform 0.3s ease;
+}
+
+.social-icons-footer a:hover {
+  transform: scale(1.2);
+}
+
+
+
 
 .copyright{
   border-top: 1px solid gray;
