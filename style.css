@@ -618,6 +618,13 @@ max-width: 600px;
     align-items: center;
     justify-content: center; /* Center items vertically */
   }
+
+.cab-routes.card{
+width:280px;
+
+}
+
+  
 }
 @media screen and (min-width: 700px) and (max-width: 1150px) {
   .cab-routes {
