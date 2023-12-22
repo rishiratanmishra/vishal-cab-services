@@ -106,6 +106,34 @@ background:var(--accent-color);
 }
 
 
+/* Responsive styles for smaller screens */
+@media (max-width: 650px) {
+  /* Navbar adjustments */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: var(--main-bg-color);
+  }
+  .bar{
+    color: #fff;
+  }
+
+  .navbar-menu a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -227,7 +255,7 @@ background:var(--accent-color);
   }
 
   .hero-image {
-    bottom: -5rem;
+    bottom: -2rem;
   }
 }
 
@@ -529,135 +557,74 @@ max-width: 600px;
 
 
 
+/* POPULAR CABS */
 
 
-/* Responsive styles for smaller screens */
-@media (max-width: 650px) {
-  /* Navbar adjustments */
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: var(--main-bg-color);
-  }
-  .bar{
-    color: #fff;
-  }
 
-  .navbar-menu a {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .navbar-toggle {
-    display: flex;
-  }
-}
-
-
-/* Popular cab routes */
-.popular-cab{
-  display: flex;
-  flex-direction: column;
+.popular-cab {
   padding: 2rem;
-  justify-content: left;
 }
-.popular-cab h2{
-  margin-left: 6rem;
+
+.popular-cab h2 {
+  text-align: center;
 }
-.cab-routes-section{
+
+.cab-routes-section {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-}
-.cab-routes{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
 }
 
-.cab-routes-card{
+.cab-routes {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-bottom: 20px;
+  gap: 2rem;
   display: flex;
+}
+
+.cab-routes-card {
   width: 350px;
   padding: 1rem;
-  justify-content: left;
-  align-items: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center; /* Adjusted to center vertically */
   border: 1px solid var(--accent-color);
   border-radius: 10px;
 }
 
-.cab-routes-card-image{
+.cab-routes-card-image {
   width: 30%;
 }
 
-.cab-routes-card img{
-  max-width: 100%;
-  object-fit: contain;
+.cab-routes-card-image img {
+  width: 100%;
   aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
-.cab-route-text{
-  margin-left: 1rem;
-}
-/* Popular cab routes */
-
-@media (max-width: 650px){
-
-  .popular-cab{
-    display: flex;
+@media screen and (max-width: 768px) {
+  .cab-routes {
+    flex: 0 0 calc(50% - 20px);
     flex-direction: column;
-    padding: 2rem;
-    justify-content: left;
-    
-  }
-  .popular-cab h2{
-    margin-left: 0rem;
-    text-align: center;
-  }
-  .cab-routes-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-  padding:1rem;
+    justify-content: center; /* Center items vertically */
   }
-  .cab-routes{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    
-  }
-  
- .cab-routes-card{
-   width:280px
- }
-  
-  
 }
 
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 480px) {
+  .cab-routes {
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center items vertically */
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1150px) {
+  .cab-routes {
+    flex: 0 0 calc(50% - 20px);
+    flex-direction: column;
+  }
+}
 
 
 
@@ -787,6 +754,7 @@ max-width: 600px;
 .copyright{
   border-top: 1px solid gray;
   text-align: center;
+  padding: 0.5rem;
 }
 
 .copyright p{
