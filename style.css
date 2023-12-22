@@ -612,7 +612,7 @@ max-width: 600px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   .cab-routes {
     flex: 0 0 100%;
     flex-direction: column;
