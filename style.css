@@ -255,7 +255,7 @@ background:var(--accent-color);
   }
 
   .hero-image {
-    bottom: -2rem;
+    bottom: 0rem;
   }
 }
 
@@ -821,3 +821,4 @@ max-width: 600px;
 
 
 }
+
